@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <title>Att jobba som utvecklare.</title>
+</head>
+
+<body>
+    <div>
+        <h1>Att jobba som utvecklare.</h1>
+        <a href='https://www.fredrikholmqvist.com/' target='blank'>fredrikholmqvist.com</a>
+    </div>
+
+    <div>
+        <h1>Format.</h1>
+        <pre>
+» Ett par slides. Avbryt gärna om något behöver förtydligas.
+» Q&A, allt mellan himmel och jord.</pre>
+    </div>
+
+
+    <div>
+        <h1>Om mig.</h1>
+        <pre>
+» Programmerat i ~20 år.
+» Professionellt sedan 2018.
+» Började som funktionell programmerare, nu primärt procedural.</pre>
+    </div>
+
+
+    <div>
+        <h1>Första<br>veckorna.</h1>
+        <pre>
+» Lära känna kollegor.
+» Få utrustning, upplärning.
+» Projektintroduktion.
+» Lätta uppgifter, oftast buggar.</pre>
+    </div>
+
+
+    <div>
+        <h1>Första<br>månaderna.</h1>
+        <pre>
+» Mindre features.
+» Repetetivt arbete.
+» Andra projekt.
+» Andra delar av samma projekt.</pre>
+    </div>
+
+
+    <div>
+        <h1>Tips.</h1>
+        <pre>
+» Du måste inte kunna allt.
+» Du förväntas inte göra mycket det första halvåret.
+» Kunskap kommer oftast <i>efter</i> erfarenhet.
+» Ingenting nytt har hänt sedan 70-talet.</pre>
+    </div>
+
+
+    <div>
+        <h2>Saker att vara<br>bekväm med (web).</h2>
+        <pre>
+» HTTP, CRUD, REST, GIT.
+» Att kunna söka efter information.
+» Measure nine times, cut once.
+» Att ha fel, att få kritik.</pre>
+    </div>
+
+
+    <div>
+        <h1>Medianambitioner.</h1>
+        <pre>
+» Lär dig det du behöver, när du behöver det.
+» Försök att förstå så mycket av projektet du orkar lära dig.
+» Ha en positiv inställning till att lära dig nya saker.
+    </pre>
+    </div>
+
+
+    <div>
+        <h1>Högre ambitioner.</h1>
+        <pre>
+» Historia: Grace Hopper, Fred Brooks, Niklaus Wirth, Tony Hoare, 
+            Dennis Ritchie, Ken Thompson, John McCarthy, Alan Kay etc.
+
+» Metodiker: Strukturerad programming, funktionell programmering, 
+             objektorienterad programmering (SmallTalk), assembly.
+
+» Verktyg: Unix och dess filosofi, VIM/Emacs/
+           hur man navigerar text utan att ta halva dagen på sig.</pre>
+    </div>
+
+
+    <div>
+        <h1><i>If I may.</i></h1>
+        <pre>
+» <a href='https://www.fredrikholmqvist.com/posts/brooks-wirth-go/' target='blank'>fredrikholmqvist.com/posts/brooks-wirth-go/</a>
+» <a href='https://www.youtube.com/watch?v=3Ea3pkTCYx4' target='blank'>youtube.com/watch?v=3Ea3pkTCYx4</a>
+  Samma sak hände på Xerox PARC (SmallTalk) and Ericsson (Erlang).
+</pre>
+    </div>
+
+
+    <div>
+        <h2>Att landa sitt<br>första jobb är svårt,<br>sen är det smörgåsbord.</h2>
+    </div>
+
+
+    <div>
+        <h1>Frågestund.</h1>
+    </div>
+
+
+    <div>
+        <h1>Tack.</h1>
+        <a href='https://www.fredrikholmqvist.com/' target='blank'>fredrikholmqvist.com</a>
+    </div>
+</body>
+
+</html>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffe3a6;
+        font-size: 2em;
+        color: #311;
+        line-height: 2;
+    }
+
+    html,
+    body,
+    pre {
+        font-family: 'Linux Libertine';
+        font-family: 'Palatino Linotype';
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Essays1743';
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+        margin: 0;
+    }
+
+    a {
+        text-decoration-color: #e81c4f33;
+        color: #e81c4f;
+    }
+
+    pre {
+        display: inline-block;
+        font-size: 0.6em;
+    }
+</style>
+
+<script>
+    let current = 0
+    let divs
+
+    window.addEventListener('load', () => {
+        divs = Array.from(document.getElementsByTagName('div'))
+        update()
+    })
+
+    window.addEventListener('keypress', (event) => {
+        if (event.key == 'w') {
+            if (current > 0) { current-- }
+            update()
+        }
+        if (event.key == 's') {
+            if (current < divs.length - 1) { current++ }
+            update()
+        }
+    })
+
+    const update = () => {
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.display = 'none'
+        }
+        divs[current].style.display = 'flex'
+    }
+
+    const get = (id) => document.getElementById(id)
+</script>

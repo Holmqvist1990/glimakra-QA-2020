@@ -13,12 +13,15 @@
 * Github om du har passionsprojekt eller open source contributions.
 * Bra utformat CV. Googla runt på exempel.
 
+## Hur skriver jag väldigt snabb mjukvara?
+* https://lwn.net/Articles/250967/
+
 ## Funktionell programmering?
 
 * Inget man måste kunna, sällan man stöter på (ren) FP såvidare man inte specialiserar sig.
 * Två val: Typad eller otypad.
 * Typad:
-    * Elm är enklast att först lära sig.
+    * Elm är enklast att lära sig först.
     * Haskell är slutmålet, inte nödvändigtvis något att börja med (går givetvis).
     * OCaml, F#, Scala är också bra alternativ (fallande ordning).
 * Otypad:
